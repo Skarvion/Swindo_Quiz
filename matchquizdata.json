@@ -1,0 +1,20 @@
+[{
+	"qid": 123,
+	"qtype": "questiontype",
+	"qpicture1": "/link",
+	"qpicture2": "/link",
+	"qtext1": "Text of Picture 1",
+	"qtext2": "Text of Picture 2",
+//	"AnsWiki": "/linkToLocalWikipedia"
+	"answerDesc": "Description of the answer"
+},
+{
+	"qid": 123,
+	"qtype": "questiontype",
+	"qpicture1": "/link",
+	"qpicture2": "/link",
+	"qtext1": "Text of Picture 1",
+	"qtext2": "Text of Picture 2",
+//	"AnsWiki": "/linkToLocalWikipedia"
+	"answerDesc": "Description of the answer"	
+}]

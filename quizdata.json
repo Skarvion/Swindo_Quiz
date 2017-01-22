@@ -1,0 +1,25 @@
+[{
+	"qid": 123,
+	"question":"default ??",
+	"qpicture": "/link",
+	"qtype": "multiplechoice",
+	"corrAnswer":["default corrAns", "alternative corrAns"],
+//	"corrAnsWiki": "Synopsis of wikipedia page",
+	"corrAnswerDescription": "Description of the answer",
+	"othAnswer1": "Ans1",
+	"othAnswer2": "Ans2",
+	"othAnswer3": "Ans3"	
+},
+{
+	"qid": 123,
+	"question":"default ??",
+	"qpicture": "/link",
+	"qtype": "multiplechoice",
+	"corrAnswer":["default corrAns", "alternative corrAns"],
+	"corrAnswerDescription": "Description of the answer",
+	"corrAnsWiki": "Synopsis of wikipedia page",
+	"othAnswer1": "Ans1",
+	"othAnswer2": "Ans2",
+	"othAnswer3": "Ans3"	
+}
+]
