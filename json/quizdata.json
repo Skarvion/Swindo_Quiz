@@ -2,7 +2,7 @@
 	"qid": 0,		// question id - cannot be repeated
 	"question":"How do you say 'name' in English?",		// required
 	"qpicture": "/link/image.jpg",		// optional img to go along w question
-	"qtype": "oneAns",		//	either: "oneAns", "typedAns", "matchAns"
+	"qtype": "oneAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
 	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
 //	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
 	"corrAnsDesc": "Description of the answer",		// elaboration of ans
@@ -14,7 +14,7 @@
 	"qid": 1,		// question id - cannot be repeated
 	"question":"How do you say 'name' in English?",		// required
 	"qpicture": "/link/image.jpg",		// optional img to go along w question
-	"qtype": "oneAns",		//	either: "oneAns", "typedAns", "matchAns"
+	"qtype": "oneAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
 	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
 //	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
 	"corrAnsDesc": "Description of the answer",		// elaboration of ans

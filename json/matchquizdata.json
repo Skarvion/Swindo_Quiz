@@ -1,6 +1,6 @@
 [{
 	"qid": 123,			// question id - cannot be repeated
-	"qtype": "matchAns",		// either: "oneAns", "typedAns", "matchAns", "None"
+	"qtype": "matchAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
 	"qpicture1": "/link",		// picture that matches to picture2
 	"qpicture2": "/link",		// picture that matches to picture1
 	"qtext1": "Text of Picture 1",	// picture1 text
@@ -10,7 +10,7 @@
 },
 {
 	"qid": 123,			// question id - cannot be repeated
-	"qtype": "matchAns",		// either: "oneAns", "typedAns", "matchAns", "None"
+	"qtype": "matchAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
 	"qpicture1": "/link",		// picture that matches to picture2
 	"qpicture2": "/link",		// picture that matches to picture1
 	"qtext1": "Text of Picture 1",	// picture1 text
