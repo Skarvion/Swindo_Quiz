@@ -15,24 +15,8 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 </head>
-<body>
-	<section id="matchAns"
-			 data-ng-app="matchAnsApp">
-	</section>
-	<section id="typedAns"
-			 data-ng-app="typedAnsApp">
-	</section>
-	<section id="oneAns"
-			 data-ng-app="oneAnsApp">
-	</section>
-	<section id="dragOneAns"
-			 data-ng-app="dragOneAnsApp">
-	</section>
-	
-	<section id="resultsPage"
-			 data-ng-app="resultsApp">
-		
-	</section>
+<body data-ng-app="quizCtrl">
+	<div data-ng-view></div>
 	
 	<!-- jQuery - required for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.min.js"></script>
