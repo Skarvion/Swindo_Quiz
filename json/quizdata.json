@@ -1,0 +1,25 @@
+[{
+	"qid": 0,		// question id - cannot be repeated
+	"question":"How do you say 'name' in English?",		// required
+	"qpicture": "/link/image.jpg",		// optional img to go along w question
+	"qtype": "oneAns",		//	either: "oneAns", "typedAns", "matchAns"
+	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
+//	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
+	"corrAnsDesc": "Description of the answer",		// elaboration of ans
+	"othAnswer1": "Ans1",		// other incorrect answers
+	"othAnswer2": "Ans2",
+	"othAnswer3": "Ans3"	
+},
+{
+	"qid": 1,		// question id - cannot be repeated
+	"question":"How do you say 'name' in English?",		// required
+	"qpicture": "/link/image.jpg",		// optional img to go along w question
+	"qtype": "oneAns",		//	either: "oneAns", "typedAns", "matchAns"
+	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
+//	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
+	"corrAnsDesc": "Description of the answer",		// elaboration of ans
+	"othAnswer1": "Ans1",		// other incorrect answers
+	"othAnswer2": "Ans2",
+	"othAnswer3": "Ans3"	
+}
+]
