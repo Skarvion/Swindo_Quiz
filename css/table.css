@@ -1,0 +1,30 @@
+th, td {
+	text-align: left;
+	padding: 5px;
+	font-size: 15px;
+}
+
+table {
+	border: 0px!important;
+	width: 100%;
+}
+
+table input[type="text"] {
+	width: inherit;
+	z-index: 1;
+	color: black;
+	width: 25px;
+}
+
+.btn-lg {
+	width: 30%;
+}
+
+collapse {
+	padding-bottom: 30px;
+	padding-top: 30px;
+}
+
+h2 {
+	font-weight: bold;
+}
