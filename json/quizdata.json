@@ -1,25 +1,56 @@
 [{
-	"qid": 0,		// question id - cannot be repeated
-	"question":"How do you say 'name' in English?",		// required
-	"qpicture": "/link/image.jpg",		// optional img to go along w question
-	"qtype": "oneAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
-	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
-//	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
-	"corrAnsDesc": "Description of the answer",		// elaboration of ans
-	"othAnswer1": "Ans1",		// other incorrect answers
-	"othAnswer2": "Ans2",
-	"othAnswer3": "Ans3"	
-},
-{
-	"qid": 1,		// question id - cannot be repeated
-	"question":"How do you say 'name' in English?",		// required
-	"qpicture": "/link/image.jpg",		// optional img to go along w question
-	"qtype": "oneAns",		// either: "oneAns", "typedAns", "matchAns", "dragOneAns", "None"
-	"corrAnswer":["Nama", ""],		// correct answer - may have alternate answer
-//	"corrAnsWiki": "Synopsis of wikipedia page", /// possible implementation
-	"corrAnsDesc": "Description of the answer",		// elaboration of ans
-	"othAnswer1": "Ans1",		// other incorrect answers
-	"othAnswer2": "Ans2",
-	"othAnswer3": "Ans3"	
-}
-]
+	"qid": "0",
+	"question": "How do you say 'name' in English",
+	"qpicture": "linkimage.jpg",		
+	"qtype": "quizAns",
+	"corrAnsDesc": "Description of the answer",		"othAnswer1": "Ans1",
+	"Answer1":"Nama",
+	"Answer2": "Ans2",
+	"Answer3": "Ans3",
+	"Answer4": "Ans4",
+	"corrAnsInt": 1
+},{
+	"qid": "1",
+	"question": "How do you say 'name' in English",
+	"qpicture": "linkimage.jpg",		
+	"qtype": "quizAns",
+	"corrAnsDesc": "Description of the answer",		"othAnswer1": "Ans1",
+	"Answer1":"Nama",
+	"Answer2": "Ans2",
+	"Answer3": "Ans3",
+	"Answer4": "Ans4",
+	"corrAnsInt": 1
+},{
+	"qid": "3",
+	"question": "How do you say 'name' in English",
+	"qpicture": "linkimage.jpg",		
+	"qtype": "quizAns",
+	"corrAnsDesc": "Description of the answer",		"othAnswer1": "Ans1",
+	"Answer1":"Nama",
+	"Answer2": "Ans2",
+	"Answer3": "Ans3",
+	"Answer4": "Ans4",
+	"corrAnsInt": 1
+},{
+	"qid": "4",
+	"question": "How do you say 'name' in English",
+	"qpicture": "linkimage.jpg",		
+	"qtype": "quizAns",
+	"corrAnsDesc": "Description of the answer",		"othAnswer1": "Ans1",
+	"Answer1":"Nama",
+	"Answer2": "Ans2",
+	"Answer3": "Ans3",
+	"Answer4": "Ans4",
+	"corrAnsInt": 1
+},{
+	"qid": "5",
+	"question": "How do you say 'name' in English",
+	"qpicture": "linkimage.jpg",		
+	"qtype": "quizAns",
+	"corrAnsDesc": "Description of the answer",		"othAnswer1": "Ans1",
+	"Answer1":"Nama",
+	"Answer2": "Ans2",
+	"Answer3": "Ans3",
+	"Answer4": "Ans4",
+	"corrAnsInt": 1
+}]

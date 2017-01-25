@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['ngRoute', 'bootstrap-modal', 'ngSanitize', 'ngCsv']);
+var app = angular.module('gameApp', ['ngRoute', 'bootstrap-modal', 'ngSanitize', 'ngCsv']);
 
 
 // Todo: Edit the url page later to accomodate with the other people's work
@@ -24,13 +24,13 @@ app.config(['$routeProvider', function ($routeProvider) {
 			templateUrl: "templates/Items.html"
 			, controller: "itemsCtrl"
 		});
-}]);
+}]);	
 
 // Factory methods that acts as the global variable for the score and its functions to get, modify and clear score. 
 // All actions that relating with the scoring method must call from this factory methods
 
 app.factory('ScoreTracker', function() {
-	var currentScore;
+	var currentScore = 0;
 	var ScoreTracker = [];
 
 	ScoreTracker.getScore = function() {
@@ -49,12 +49,13 @@ app.factory('ScoreTracker', function() {
 		currentScore = 0;
 	}
 
+	return ScoreTracker;
 });
 
 app.factory('JSONData', ['$http', function ($http) {
 	var JSONData = [];
-	var quizURL = "/link";
-	var matchURL = "/link";
+	var quizURL = "json/quizdata.json";
+	var matchURL = "json/matchquizdata.json";
 
 	JSONData.getQuiz = function() {
 		return $http.get(quizURL);
@@ -64,12 +65,15 @@ app.factory('JSONData', ['$http', function ($http) {
 		return $http.get(matchURL);
 	}
 
+	return JSONData;
+
 }]);
 
 app.controller('multipleChoiceGameCtrl', function ($scope, $http) {
-	var questionID = [];
-	var $scope.rawQuestions = []; // The raw array of questions that have yet to be processed
-	var $scope.quizQuestions = [];
+	alert("Work");
+
+	$scope.rawQuestions = []; // The raw array of questions that have yet to be processed
+	$scope.quizQuestions = [];
 	
 	// Selecting a random number of questions from the database
 	function questionSelect(quantity) {
@@ -102,6 +106,7 @@ app.controller('multipleChoiceGameCtrl', function ($scope, $http) {
 					for (var j = 0; j < selectedQuestionIndex.length; j++) {
 						if (rand == selectedQuestionIndex[j]) {
 							duplicate = true;
+							restart = true;
 							break;
 						}
 					}
@@ -190,3 +195,4 @@ app.controller('multipleChoiceGameCtrl', function ($scope, $http) {
 
 
 }
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id" data-ng-app="quizApp">
+<html lang="id" ng-app="gameApp">
 <head>
 	<title></title>
 	<meta charset="utf-8" /> 
@@ -15,14 +15,32 @@
 		<script src="js/respond.min.js"></script>
 		<![endif]-->
 </head>
-<body data-ng-app="quizCtrl">
-	<div data-ng-view></div>
-	
+<body ng-controller="MCQGameCtrl">
+<!-- 	<div data-ng-view></div>	
+	<p ng-bind="variable"></p>
+ -->	
+	 <ul>
+	 	<li data-ng-repeat="question in quizQuestions">
+			{{question.qid}} </br>
+			{{question.question}}
+			<form action="">
+					<input type="radio" name="select1" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="1">{{question.Answer1}}</input></br>
+					<input type="radio" name="select2" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="2">{{question.Answer2}}</input></br>
+					<input type="radio" name="select3" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="3">{{question.Answer3}}</input></br>
+					<input type="radio" name="select4" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="4">{{question.Answer4}}</input></br>
+					<input type="button" ng-click="checkAnswer(question)" ng-disabled="question.isDisabled" value="Submit" />
+			</form>
+			{{question.status}}
+		</li>
+	</ul>
+
 	<!-- jQuery - required for Bootstrap's JavaScript plugins) -->
 	<script src="js/jquery.min.js"></script>
 	<!-- All Bootstrap plug-ins file -->
 	<script src="js/bootstrap.min.js"></script>
-	<!–- Basic AngularJS -->
+	<!-- Basic AngularJS -->
 	<script src="js/angular.min.js"></script>
+	<script src="js/angular-route.min.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>
