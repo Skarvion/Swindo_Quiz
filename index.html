@@ -22,6 +22,7 @@
 	<!-- Plugin CSS -->
 	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 	<link href="css/table.css" rel="stylesheet">
+	<link href="css/stripes.css" rel="stylesheet">
 
 	<!-- Theme CSS -->
 	<link href="css/creative.min.css" rel="stylesheet">
@@ -69,66 +70,72 @@
 	<section class="bg-primary" id="top">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2 text-center">
+				<div class="col-lg-8 col-xs-8 col-lg-offset-2 col-xs-offset-2 text-center">
 					<h2 class="section-heading">Welcome to Swindo Quiz!</h2>
 					<hr class="light">
 					<p>Select a quiz:</p>
 					<div class="row">
-						<div class="col-lg-12 text-center">
+						<div class="col-lg-12 col-xs-12 text-center">
 							<ul>
 								<li>Quizzes will be listed here</li>
 							</ul>
 						</div>
 
 					</div>
-					<a data-toggle="collapse" data-target="#q1" class="page-scroll btn btn-default btn-xl sr-button" href="#qOne">Start Quiz!</a>
+					<a id="start" data-toggle="collapse" data-target="#q1" class="page-scroll btn btn-default btn-xl sr-button" href="#qOne" onClick="hideMe('start')">Start Quiz!</a>
 					<h2 id="qOne">Question 1 (Typing)</h2>
-					<div class="collapse" id="q1">
+					<div class="collapse row" id="q1">
 						<p>What country did our foreign visitors come from?</p>
-						<div class="form-group">
+						<div class="form-group col-lg-12 col-xs-12">
 								<div class="row">
-									<div class="col-lg-4 text-right">
+									<div class="col-lg-4 col-xs-4 text-right">
 											<label for="answer">Answer</label>
 									</div>
 									<div class="col-lg-5 col-xs-4">
 											<input type="text" class="form-control" id="answer">
-									</div>
-									<div class="col-lg-3">
-										<a href="javascript:void(0);" class="btn btn-default btn-xl sr-button" onclick="validateTyping()" id="typingCheck">Check</a>
+										<div class="row">
+											<div class="col-lg-12 col-xs-12">
+												<a href="javascript:void(0);" class="btn btn-default btn-xl sr-button" onclick="validateTyping()" id="typingCheck">Check</a>
+											</div>
+										</div>
+
 									</div>
 								</div>
+								<div class="row">
+									<img src="img/typing1.png" width="250" height="200" alt="Map" class="qPic">
+									<br/>
+								</div>
 						</div>
-							<img src="img/typing1.png" width="250" height="200" alt="Map">
-							<br/>
 						<!--Button should only be clickable when the player has amswered the question correctly-->
-						<a data-toggle="collapse" data-target="#q2" class="page-scroll btn btn-default btn-xl sr-button" href="#qTwo">Next Question</a>
+						<a id="to2" data-toggle="collapse" data-target="#q2" class="page-scroll btn btn-default btn-xl sr-button" href="#qTwo" onClick="hideMe('to2')">Next Question</a>
 					</div>
 					<!--amount of questions will vary-->
 					<h2 id="qTwo">Question 2 (Multiple Choice)</h2>
-					<div class="collapse" id="q2">
-
-						<div class="row">
-								<div class="col-lg-4 text-right"><img src="img/koala.jpg" height="100" width="100"></div>
-								<div class="col-lg-8 text-left"><p>What kind of native Australian animal is this?</p></div>
+					<div class="collapse row" id="q2">
+						<div class="col-lg-12 col-xs-12">
+							<div class="row">
+								<div class="col-lg-4 col-xs-4 text-right"><img src="img/koala.jpg" height="100" width="100" class="qPic"></div>
+								<div class="col-lg-8 col-xs-8 text-left"><p>What kind of native Australian animal is this?</p></div>
 							</div>
 
 							<p>
-								<div class=" btn btn-default btn-lg sr-button active"> Wombat </div>
-								<div class=" btn btn-default btn-lg sr-button active"> Koala </div>
+								<a class=" btn btn-default btn-lg sr-button active" id="multi1" onClick="validateMulti(multi1)"> Wombat </a>
+								<a class=" btn btn-default btn-lg sr-button active" id="multi2" onClick="validateMulti(multi2)"> Koala </a>
 							</p>
 							<p>
-								<div class=" btn btn-default btn-lg sr-button active"> Dingo </div>
-								<div class=" btn btn-default btn-lg sr-button active"> Emu </div>
+								<a class=" btn btn-default btn-lg sr-button active" id="multi3" onClick="validateMulti(multi3)"> Dingo </a>
+								<a class=" btn btn-default btn-lg sr-button active" id="multi4" onClick="validateMulti(multi4)"> Emu </a>
 							</p>
 							<br>
 						<!--Button should only be clickable when the player has amswered the question correctly-->
-						<a data-toggle="collapse" data-target="#q3" class="page-scroll btn btn-default btn-xl sr-button" href="#qThree">Next Question</a>
+						<a id="to3" data-toggle="collapse" data-target="#q3" class="page-scroll btn btn-default btn-xl sr-button" href="#qThree" onClick="hideMe('to3')">Next Question</a>
 					</div>
+						</div>
 						<h2 id="qThree">Question 3</h2>
 						<div class="collapse" id="q3">
 							<div class="row">
-								<div class="col-lg-2"></div>
-								<div class="col-lg-8">
+								<div class="col-lg-2 col-xs-2"></div>
+								<div class="col-lg-8 col-xs-8">
 									<p>Match the words to their Indonesian equivalent</p>
 
 									<table>
@@ -169,7 +176,7 @@
 
 
 							<!--Button should only be clickable when the player has amswered the question correctly-->
-						<a data-toggle="collapse" data-target="#q3" class="page-scroll btn btn-default btn-xl sr-button">Next Question</a>
+						<a id="quizEnd" data-toggle="collapse" data-target="#qEnd" class="page-scroll btn btn-default btn-xl sr-button" onClick="hideMe('quizEnd')" href="#qEnd">Next Question</a>
 					</div>
 				</div>
 	</section>
@@ -179,17 +186,33 @@
 	</section>
 -->
 
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-lg-offset-2 text-center">
+				<div class="collapse" id="qEnd">
+					<section id="test" style = "border:30px solid powderblue;" >
+						<h2 id="qEnd">End of Quiz</h2>
+						<div id="scoreBox" class="row">
+							<p>Your score was: <p id="score"> score </p>
+							</div>
+				</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<aside class="bg-dark">
 		<div class="container text-center">
 			<div class="call-to-action">
 				<h2>Help</h2>
 				<section class="no-padding" id="help">
 		<div class="container-fluid">
-			<div class="row no-gutter popup-gallery">
+			<div class="row no-gutter">
 				<div class="col-lg-4 col-sm-6">
 					<!--Replace images with graphics about answering questions-->
-					<a href="img/portfolio/fullsize/4.jpg" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/4.jpg" class="img-responsive" alt="">
+					<a href="img/portfolio/fullsize/4.jpg" class="portfolio-box" data-target="#my1" data-toggle="modal">
+						<img src="img/TypingQuestions/TypingHelp_1.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
@@ -201,10 +224,70 @@
 							</div>
 						</div>
 					</a>
+					<!-- Start making the carousel in modal (Typing Question)-->
+					<div class="modal" id="my1" tabindex="-1" style="display: none;">
+						<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">x</button>
+							<h4 class="modal-title" style="color: black;">How to Answer Typing Question</h4>
+						</div>
+						<!-- Modal-Body -->
+						<div class="modal-body">
+							<div id="1" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+								  <li data-target="#1" data-slide-to="0" class="active"></li>
+								  <li data-target="#1" data-slide-to="1"></li>
+								  <li data-target="#1" data-slide-to="2"></li>
+								  <li data-target="#1" data-slide-to="3"></li>
+								  <li data-target="#1" data-slide-to="4"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+								  <div class="item active">
+								  <div class="imageOption">
+									<img src="img/TypingQuestions/TypingHelp_1.jpg" alt="TypingHelp_1" width="100%" height="100%">
+								  </div>
+								  </div>
+
+								  <div class="item">
+									<img src="img/TypingQuestions/TypingHelp_2.jpg" alt="TypingHelp_2" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/TypingQuestions/TypingHelp_3.jpg" alt="TypingHelp_3" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/TypingQuestions/TypingHelp_4.jpg" alt="TypingHelp_4" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/TypingQuestions/TypingHelp_5.jpg" alt="TypingHelp_5" width="100%" height="100%">
+								  </div>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#1" role="button" data-slide="prev">
+								  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								  <span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#1" role="button" data-slide="next">
+								  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								  <span class="sr-only">Next</span>
+								</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+					<!-- End of carousel in modal (Typing Question) -->
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a href="img/portfolio/fullsize/5.jpg" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/5.jpg" class="img-responsive" alt="">
+					<a href="img/portfolio/fullsize/5.jpg" class="portfolio-box" data-target="#my2" data-toggle="modal">
+						<img src="img/MultipleChoiceQuestions/MultipleChoice_1.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
@@ -216,10 +299,65 @@
 							</div>
 						</div>
 					</a>
+					<!-- Start making the carousel in modal (Multiple Choice Question) -->
+					<div class="modal" id="my2" tabindex="-1" style="display: none;">
+						<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">x</button>
+							<h4 class="modal-title" style="color: black;">How to Answer Multiple Choice Question</h4>
+						</div>
+						<!-- Modal-Body -->
+						<div class="modal-body">
+							<div id="2" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+								  <li data-target="#2" data-slide-to="0" class="active"></li>
+								  <li data-target="#2" data-slide-to="1"></li>
+								  <li data-target="#2" data-slide-to="2"></li>
+								  <li data-target="#2" data-slide-to="3"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+								  <div class="item active">
+								  <div class="imageOption">
+									<img src="img/MultipleChoiceQuestions/MultipleChoice_1.jpg" alt="MultipleChoice_1" width="100%" height="100%">
+								  </div>
+								  </div>
+
+								  <div class="item">
+									<img src="img/MultipleChoiceQuestions/MultipleChoice_2.jpg" alt="MultipleChoice_2" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/MultipleChoiceQuestions/MultipleChoice_3.jpg" alt="MultipleChoice_3" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/MultipleChoiceQuestions/MultipleChoice_4.jpg" alt="MultipleChoice_4" width="100%" height="100%">
+								  </div>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#2" role="button" data-slide="prev">
+								  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								  <span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#2" role="button" data-slide="next">
+								  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								  <span class="sr-only">Next</span>
+								</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+					<!-- End of carousel in modal (Multiple Choice Question) -->
 				</div>
 				<div class="col-lg-4 col-sm-6">
-					<a href="img/portfolio/fullsize/6.jpg" class="portfolio-box">
-						<img src="img/portfolio/thumbnails/6.jpg" class="img-responsive" alt="">
+					<a href="img/portfolio/fullsize/6.jpg" class="portfolio-box" data-target="#my3" data-toggle="modal">
+						<img src="img/MatchingQuestions/Matchinghelp_1.jpg" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
@@ -231,6 +369,63 @@
 							</div>
 						</div>
 					</a>
+
+					<!-- Start making the carousel in modal (Multiple Choice Question) -->
+					<div class="modal" id="my3" tabindex="-1" style="display: none;">
+						<div class="modal-dialog modal-lg">
+						<div class="modal-content">
+						<div class="modal-header">
+							<button class="close" data-dismiss="modal">x</button>
+							<h4 class="modal-title" style="color: black;">How to Answer Drag and Drop Question</h4>
+						</div>
+						<!-- Modal-Body -->
+						<div class="modal-body">
+							<div id="3" class="carousel slide" data-ride="carousel">
+								<!-- Indicators -->
+								<ol class="carousel-indicators">
+								  <li data-target="#3" data-slide-to="0" class="active"></li>
+								  <li data-target="#3" data-slide-to="1"></li>
+								  <li data-target="#3" data-slide-to="2"></li>
+								  <li data-target="#3" data-slide-to="3"></li>
+								</ol>
+
+								<!-- Wrapper for slides -->
+								<div class="carousel-inner" role="listbox">
+								  <div class="item active">
+								  <div class="imageOption">
+									<img src="img/MatchingQuestions/Matchinghelp_1.jpg" alt="Matchinghelp_1" width="100%" height="100%">
+								  </div>
+								  </div>
+
+								  <div class="item">
+									<img src="img/MatchingQuestions/Matchinghelp_2.jpg" alt="Matchinghelp_2" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/MatchingQuestions/Matchinghelp_3.jpg" alt="Matchinghelp_3" width="100%" height="100%">
+								  </div>
+
+								  <div class="item">
+									<img src="img/MatchingQuestions/Matchinghelp_4.jpg" alt="Matchinghelp_4" width="100%" height="100%">
+								  </div>
+								</div>
+
+								<!-- Left and right controls -->
+								<a class="left carousel-control" href="#3" role="button" data-slide="prev">
+								  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								  <span class="sr-only">Previous</span>
+								</a>
+								<a class="right carousel-control" href="#3" role="button" data-slide="next">
+								  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								  <span class="sr-only">Next</span>
+								</a>
+						  </div>
+						</div>
+					</div>
+				</div>
+			</div>
+					<!-- End of carousel in modal (Drag and Drop Question) -->
+
 				</div>
 			</div>
 		</div>
@@ -245,8 +440,21 @@
 				<div class="col-lg-8 col-lg-offset-2 text-center">
 					<h2 class="section-heading">About</h2>
 					<hr class="primary">
-					<p>Let's talk about ourselves and the goal of the project here</p>
 				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-4 col-xs-6">
+					<figure>
+						<img src="img/group.png" class="img-responsive">
+						<figcaption>From left to right: Nadia, Caslon, Margret, Andrew, Germaine, Luke, Leanne, Josiah, Alex and Olivia</figcaption>
+					</figure>
+				</div>
+				<div class="col-lg-6 col-xs-">
+					<p>This website and companion application developed for this quiz was created by students of Swinburne University
+					, Australia. This website was designed with students in mind, to ensure an engaging yet educational user experience.
+					By developing a companion application for teachers, the quiz content can stay up to date and relevant to student learning.</p>
+				</div>
+				<div class="col-lg-2"></div>
 			</div>
 		</div>
 	</section>
