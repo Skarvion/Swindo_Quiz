@@ -38,8 +38,6 @@ app.factory('JSONData', ['$http', '$q', function ($http, $q) {
 }]);
 
 app.controller("MCQGameCtrl", ['$scope', '$rootScope', '$http', '$q', 'JSONData', function ($scope, $rootScope, $http, $q, JSONData) {
-	$scope.rawData = [];
-	$scope.rawQuestions = []; // The raw array of questions that have yet to be processed
 	$scope.quizQuestions = [];
 
 	function ExtractData() {
@@ -47,7 +45,6 @@ app.controller("MCQGameCtrl", ['$scope', '$rootScope', '$http', '$q', 'JSONData'
 		JSONData.getQuiz()
 			.then(function (response) {
 				$scope.quizQuestions = response.data;
-				// $scope.rawData = response.data;
 			},
 			function (status) {
 				alert("Data quiz tidak bisa diambil");
@@ -80,7 +77,9 @@ app.controller("MCQGameCtrl", ['$scope', '$rootScope', '$http', '$q', 'JSONData'
 		$scope.refreshList();
 	}
 
-	$scope.checkAnswer = function (question) {
+	$scope.checkAnswer = function (question, selection) {
+		question.selectedAnswer = selection;
+
 		if (question.selectedAnswer == 0) {
 			alert("Mohon diisi jawabannya");
 			return;
@@ -94,10 +93,6 @@ app.controller("MCQGameCtrl", ['$scope', '$rootScope', '$http', '$q', 'JSONData'
 
 		question.isDisabled = true;
 	}
-
-	$scope.random = function() {
-		return 0.5 - Math.random();
-	};
 
 	ExtractData();
 

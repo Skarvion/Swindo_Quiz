@@ -21,14 +21,12 @@
  -->	
 	 <ul>
 	 	<li data-ng-repeat="question in quizQuestions">
-			{{question.qid}} </br>
 			{{question.question}}
 			<form action="">
-					<input type="radio" name="select1" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="1">{{question.Answer1}}</input></br>
-					<input type="radio" name="select2" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="2">{{question.Answer2}}</input></br>
-					<input type="radio" name="select3" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="3">{{question.Answer3}}</input></br>
-					<input type="radio" name="select4" ng-model="question.selectedAnswer" ng-disabled="question.isDisabled" value="4">{{question.Answer4}}</input></br>
-					<input type="button" ng-click="checkAnswer(question)" ng-disabled="question.isDisabled" value="Submit" />
+					<input type="button" ng-click="checkAnswer(question, 1)" ng-disabled="question.isDisabled" value="{{question.Answer1}}" />
+					<input type="button" ng-click="checkAnswer(question, 2)" ng-disabled="question.isDisabled" value="{{question.Answer2}}" />
+					<input type="button" ng-click="checkAnswer(question, 3)" ng-disabled="question.isDisabled" value="{{question.Answer3}}" />
+					<input type="button" ng-click="checkAnswer(question, 4)" ng-disabled="question.isDisabled" value="{{question.Answer4}}" />
 			</form>
 			{{question.status}}
 		</li>
