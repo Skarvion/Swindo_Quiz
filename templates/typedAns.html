@@ -1,10 +1,18 @@
-<form id="typedAnsForm"
-	  name="typedAns"
-	  data-ng-model="typedAnsModel">
-	{{Question}}
-	<!-- Other stuff-->
-	<input type="text" 
-		   name="typedAns">
-	<input type="submit"
-		   name="submit" >
-</form>
+<p>
+								{{project.question}}</p>
+							
+							<div class="form-group">
+									<div class="row">
+										<div class="col-lg-4 text-right">
+												<label for="answer">Answer</label>
+										</div>
+										<div class="col-lg-5 col-xs-4">
+												<input type="text" class="form-control" id="answer">
+										</div>
+										<div class="col-lg-3">
+											<a href="javascript:void(0);" class="btn btn-default btn-xl sr-button" onclick="validateTyping()" id="typingCheck">Check</a>
+										</div>
+									</div>
+							</div>
+								<img src="img/typing1.png" width="250" height="200" alt="Map">
+								<br/>

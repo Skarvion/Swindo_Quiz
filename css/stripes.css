@@ -1,0 +1,25 @@
+section
+{
+	background: linear-gradient(to right,
+								#008080 15%, #FF4500 15%,
+								#FF4500 85%, #008080 85%);
+}
+
+#scoreBox {
+	background-color: #5F9EA0 !important;
+}
+
+img {
+	margin: 5px;
+	border: 2px solid black;
+}
+
+.score {
+	text-decoration-style: solid;
+	font-size: 50%;
+}
+
+figcaption {
+	background-color: cadetblue;
+}
+
