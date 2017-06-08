@@ -22,16 +22,18 @@ Note: Some features may not be available on the repo as they were not uploaded.
 
 ## Getting Started
 
-Run index.html and you're good to go!
+Download the repo and run index.html and you're good to go!
 
 
 ## Creator
 
 Coding Team: Germaine Wong ([@wgermaine](http://github.com/wgermaine)), William Saputra ([@Skarvion](http://github.com/Skarvion)), Aleksander Manev
+
 UI Team: Leanne Dyer, etc.
+
 Content Team: Andrew Bennett, Listiani, Dean, etc. 
 
 Special Thanks to:
-Nadia Nawabi, Luke Gavin, Olivia McKeon and Josiah Dean
+Nadia Nawabi, Luke Gavin, Olivia McKeon and Josiah Dean who helped this project while working on another.
 
-This repository is no longer maintained.
+**This repository is no longer maintained.**
